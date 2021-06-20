@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+                <div class="col-6">
+                    <p> พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM)</p>
+                </div>
+                <div class="col-6 text-right">
+                    <p>นางสาว ทิตฐิตา โตบึงกอก
+                    <img src="" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;"> 
+                    <a href="index.html"class="btn btn-outline-danger" >logout</a>
+                </p>
+                </div>
+                <div class="col-12">
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-light">
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="dashboard.html"class="btn btn-outline-success" >หน้าแรก</a>
+          
+      </li>
+      &nbsp;
+      <li class="nav-item">
+          <a href="buyorder.html"class="btn btn-outline-success" >กรอกรายละเอียดสั่งซื้อ</a>
+
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a href="dashboard2.html"class="btn btn-outline-success" >แสดงข้อมูล</a>
+       
+      </li>
+    </ul>
+  </nav>
+</div>
+&nbsp;
+<div class="col-12"></div>
+<div class="col-3">
+    <span class="border border-success" id="border1">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+        <h4>รหัสประจำตัว</h4>
+        <p>630632006</p>
+        </li>
+        <li class="nav-item">
+            <h4>ชื่อ-สกุล</h4>
+            <p>ภาษาไทย : นางสาว ทิตฐิตา โตบึงกอก </p>
+            <p>ภาษาอังกฤษ : Miss DITTHITA TOHBUENGKOK </p>
+        </li>
+        <li class="nav-item">
+            <h4>คณะ</h4>
+            <p>วิศวกรรมศาสตร์</p>
+            <p>Faculty of Engineering</p>
+        </li>
+        <li class="nav-item">
+            <h4>E-mail</h4>
+            <p>ditthita_t@cmu.ac.th</p>
+        </li>
+      </ul>
+    </span>
+</div>
+<div class="col-9">
+    <span class="border border-success" id="border2">
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+              A basic column chart compares rainfall values between four cities.
+              Tokyo has the overall highest amount of rainfall, followed by New York.
+              The chart is making use of the axis crosshair feature, to highlight
+              months as they are hovered over.
+            </p>
+          </figure>
+    </span>
+</div>
+        </div>
+    </div>
+</body>
+<script>
+Highcharts.chart('container', {
+  chart: {
+    type: 'column'
+  },
+  title: {
+    text: 'แสดงรายชื่อฟาร์มทั้งหมด'
+  },
+  subtitle: {
+    text: 'แสดงจำนวนไก่ของแต่ละฟาร์ม'
+  },
+  xAxis: {
+    categories: [
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม'
+    ],
+    crosshair: true
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Rainfall (mm)'
+    }
+  },
+  tooltip: {
+    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.1f} ตัว</b></td></tr>',
+    footerFormat: '</table>',
+    shared: true,
+    useHTML: true
+  },
+  plotOptions: {
+    column: {
+      pointPadding: 0.2,
+      borderWidth: 0
+    }
+  },
+  series: [{
+    name: 'เพศผู้',
+    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
+  }, {
+    name: 'เพศเมีย',
+    data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+
+  }]
+});
+</script>
+</html>

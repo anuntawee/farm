@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+                <div class="col-6">
+                    <p> พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM)</p>
+                </div>
+                <div class="col-6 text-right">
+                    <p>นางสาว ทิตฐิตา โตบึงกอก
+                    <img src="" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;"> 
+                    <a href="index.html"class="btn btn-outline-danger" >logout</a>
+                
+                </p>
+                </div>
+                <div class="col-12">
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-light">
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="dashboard.html"class="btn btn-outline-success" >หน้าแรก</a>
+          
+      </li>
+      &nbsp;
+      <li class="nav-item">
+          <a href="buyorder.html"class="btn btn-outline-success" >กรอกรายละเอียดสั่งซื้อ</a>
+
+      </li>
+      &nbsp;
+      <li class="nav-item">
+        <a href="dashboard2.html"class="btn btn-outline-success" >แสดงข้อมูล</a>
+       
+      </li>
+    </ul>
+  </nav>
+</div>
+&nbsp;
+<div class="col-12"></div>
+<div class="col-3">
+    <span class="border border-success" id="border1">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+        <h4>รหัสประจำตัว</h4>
+        <p>630632006</p>
+        </li>
+        <li class="nav-item">
+            <h4>ชื่อ-สกุล</h4>
+            <p>ภาษาไทย : นางสาว ทิตฐิตา โตบึงกอก </p>
+            <p>ภาษาอังกฤษ : Miss DITTHITA TOHBUENGKOK </p>
+        </li>
+        <li class="nav-item">
+            <h4>คณะ</h4>
+            <p>วิศวกรรมศาสตร์</p>
+            <p>Faculty of Engineering</p>
+        </li>
+        <li class="nav-item">
+            <h4>E-mail</h4>
+            <p>ditthita_t@cmu.ac.th</p>
+        </li>
+      </ul>
+    </span>
+</div>
+<div class="col-9">
+    <span class="border border-success" id="border2">
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ชื่อฟาร์ม</th>
+                    <th>ที่อยู่</th>
+                    <th>เบอร์โทร</th>
+                    <th>จำนวนไก่เพศผู้</th>
+                    <th>จำนวนไก่เพศเมีย</th>
+                    <th>จำนวนอาหาร</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>61</td>
+                    <td>20 กก.</td>
+                   
+                </tr>
+                <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>63</td>
+                    <td>20 กก.</td>
+                   
+                </tr>
+                <tr>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>66</td>
+                    <td>20 กก.</td>
+                   
+                </tr>
+                <tr>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>22</td>
+                    <td>20 กก.</td>
+                   
+                </tr>
+                <tr>
+                    <td>Airi Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>33</td>
+                    <td>20 กก.</td>
+                 
+                </tr>
+               
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ชื่อฟาร์ม</th>
+                    <th>ที่อยู่</th>
+                    <th>เบอร์โทร</th>
+                    <th>จำนวนไก่เพศผู้</th>
+                    <th>จำนวนไก่เพศเมีย</th>
+                    <th>จำนวนอาหาร</th>
+                   
+                </tr>
+            </tfoot>
+        </table>
+    </span>
+</div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+</html>
