@@ -28,13 +28,13 @@
     <br>
     <div class="container">
         <div class="row">
-                <div class="col-8">
-                  <h2>พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM)</h2>
+                <div class="col-6">
+                    <p> พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM)</p>
                 </div>
-                <div class="col-4 text-right">
-                  <p> <span id="f1"> นางสาว ทิตฐิตา โตบึงกอก </span>
+                <div class="col-6 text-right">
+                    <p>นางสาว ทิตฐิตา โตบึงกอก
                     <img src="" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;"> 
-                    <a href="index.html"class="btn btn-outline-danger" >logout</a>
+                    <a href="index.html"class="btn btn-danger" >logout</a>
                 </p>
                 </div>
                 <div class="col-12">
@@ -54,6 +54,10 @@
       </li>
       &nbsp;
       <li class="nav-item">
+        <a href="order.html"class="btn btn-outline-success" >แสดงรายการสั่งซื้อ</a>  
+      </li>
+      &nbsp;
+      <li class="nav-item">
         <a href="dashboard2.html"class="btn btn-outline-success" >แสดงข้อมูล</a>
        
       </li>
@@ -64,21 +68,22 @@
 <div class="col-12"></div>
 <div class="col-3">
     <span class="border border-success" id="border1">
-      <ul class="nav flex-column">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+        <h4>รหัสประจำตัว</h4>
+        <p>630632006</p>
+        </li>
         <li class="nav-item">
             <h4>ชื่อ-สกุล</h4>
             <p>ภาษาไทย : นางสาว ทิตฐิตา โตบึงกอก </p>
-            <p>ภาษาอังกฤษ : Miss DITTHITA TOHBUENGKOK </p>
+         
         </li>
         <li class="nav-item">
-            <h4>ตำแหน่ง</h4>
-            <p>เจ้าหน้าที่</p>
-            <p>official</p>
+            <h4>คณะ</h4>
+            <p>วิศวกรรมศาสตร์</p>
+            <p>Faculty of Engineering</p>
         </li>
-        <li class="nav-item">
-            <h4>E-mail</h4>
-            <p>ditthita_t@cmu.ac.th</p>
-        </li>
+     
       </ul>
     </span>
 </div>
@@ -107,13 +112,22 @@ Highcharts.chart('container', {
     text: 'แสดงรายชื่อฟาร์มทั้งหมด'
   },
   subtitle: {
-    text: 'แสดงจำนวนไก่และอาหารของแต่ละฟาร์ม'
+    text: 'แสดงจำนวนไก่ของแต่ละฟาร์ม'
   },
   xAxis: {
     categories: [
-      'พงษ์ไพบูลย์ฟาร์ม (นครสวรรค์)',
-      'พงษ์ไพบูลย์ฟาร์ม (ลพบุรี)',
-      
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม',
+      'ฟาร์ม'
     ],
     crosshair: true
   },
@@ -126,7 +140,7 @@ Highcharts.chart('container', {
   tooltip: {
     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
     pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-      '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+      '<td style="padding:0"><b>{point.y:.1f} ตัว</b></td></tr>',
     footerFormat: '</table>',
     shared: true,
     useHTML: true
@@ -138,27 +152,12 @@ Highcharts.chart('container', {
     }
   },
   series: [{
-    name: 'ไก่เพศผู้',
-    data: [49.9, 71.5]
+    name: 'เพศผู้',
+    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
 
   }, {
-    name: 'ไก่เพศเมีย',
-    data: [83.6, 78.8]
-
-  }
-  , {
-    name: '203T',
-    data: [83.6, 78.8]
-
-  }
-  , {
-    name: '204T',
-    data: [50.6, 70.8]
-
-  }
-  , {
-    name: '205T',
-    data: [60.6, 65.8]
+    name: 'เพศเมีย',
+    data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
 
   }]
 });
