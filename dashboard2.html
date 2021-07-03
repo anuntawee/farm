@@ -32,7 +32,7 @@
                   <h2>พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM)</h2>
                 </div>
                 <div class="col-4 text-right">
-                    <p>นางสาว ทิตฐิตา โตบึงกอก
+                    <p style="color:white">นางสาว ทิตฐิตา โตบึงกอก
                     <img src="" alt="" class="ml-3 mt-3 rounded-circle" style="width:60px;"> 
                     <a href="index.html"class="btn btn-danger" >Logout</a>
                 </p>
@@ -91,19 +91,116 @@
             พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM) นครสวรรค์
           </a>
         </div>
-        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div id="collapseOne" class="collapse" data-parent="#accordion">
           <div class="card-body">
-            <select id="demo" class="form-control">
+            <select id="pagelist" class="form-control">
                 <script>
                   let text = "";
-                  text += "<option> กรุณาเลือกเล้าไก่ </option>";
-                  for (let i = 1; i < 6; i++) {
+                  text += "<option selected> กรุณาเลือกเล้าไก่ </option>";
+                  for (let i = 1; i < 7; i++) {
                    
-                    text += "<option > เล้าไก่ที่ " + i + "</option>";
+                    text += "<option value="+i+"> เล้าไก่ที่ " + i + "</option>";
                   }
-                  document.getElementById("demo").innerHTML = text;
-                  </script>
+                  document.getElementById("pagelist").innerHTML = text;
+              $("#pagelist").change(function(){
+                var viewID = $("#pagelist option:selected").val();
+                $("#pagelist option").each(function(){
+                var hideID = $(this).val();
+                  $("#"+hideID).hide();
+                    });
+                $("#"+viewID).show();
+              });
+              </script>
           </select>
+          <hr>
+          <div id="1" style="display: none;">
+            <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 1</h3>
+            <div class="row text-center">
+                  <div class="col-6"> 
+                          <h3>ไก่เพศผู้</h3>
+                          <p>จำนวน : 10000 ตัว</p>
+                  </div>
+                  <div class="col-6"> 
+                    <h3>ไก่เพศเมีย</h3>
+                    <p>จำนวน : 8000 ตัว</p>
+                  </div>
+            </div>
+          </div>
+          <div id="2" style="display: none;">
+            <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 2</h3>
+            <div class="row text-center">
+                  <div class="col-6"> 
+                          <h3>ไก่เพศผู้</h3>
+                          <p>จำนวน : 10000 ตัว</p>
+                  </div>
+                  <div class="col-6"> 
+                    <h3>ไก่เพศเมีย</h3>
+                    <p>จำนวน : 10000 ตัว</p>
+                  </div>
+            </div>
+          </div>
+          <div id="3" style="display: none;">
+            <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 3</h3>
+            <div class="row text-center">
+                  <div class="col-6"> 
+                          <h3>ไก่เพศผู้</h3>
+                          <p>จำนวน : 10000 ตัว</p>
+                  </div>
+                  <div class="col-6"> 
+                    <h3>ไก่เพศเมีย</h3>
+                    <p>จำนวน : 8000 ตัว</p>
+                  </div>
+            </div>
+          </div>
+          <div id="4" style="display: none;">
+            <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 4</h3>
+            <div class="row text-center">
+                  <div class="col-6"> 
+                          <h3>ไก่เพศผู้</h3>
+                          <p>จำนวน : 10000 ตัว</p>
+                  </div>
+                  <div class="col-6"> 
+                    <h3>ไก่เพศเมีย</h3>
+                    <p>จำนวน : 10000ตัว</p>
+                  </div>
+            </div>
+          </div>
+          <div id="5" style="display: none;">
+            <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 5</h3>
+            <div class="row text-center">
+                  <div class="col-6"> 
+                          <h3>ไก่เพศผู้</h3>
+                          <p>จำนวน : 10000 ตัว</p>
+                  </div>
+                  <div class="col-6"> 
+                    <h3>ไก่เพศเมีย</h3>
+                    <p>จำนวน : 8000 ตัว</p>
+                  </div>
+            </div>
+          </div>
+          <div id="6" style="display: none;">
+            <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 6</h3>
+            <div class="row text-center">
+                  <div class="col-6"> 
+                          <h3>ไก่เพศผู้</h3>
+                          <p>จำนวน : 10000 ตัว</p>
+                  </div>
+                  <div class="col-6"> 
+                    <h3>ไก่เพศเมีย</h3>
+                    <p>จำนวน : 10000 ตัว</p>
+                  </div>
+            </div>
+          </div>
+          <span class="border border-success" id="border2">
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+                <p class="highcharts-description">
+                  A basic column chart compares rainfall values between four cities.
+                  Tokyo has the overall highest amount of rainfall, followed by New York.
+                  The chart is making use of the axis crosshair feature, to highlight
+                  months as they are hovered over.
+                </p>
+        </span>
           </div>
         </div>
       </div>
@@ -115,17 +212,47 @@
         </div>
         <div id="collapseTwo" class="collapse" data-parent="#accordion">
           <div class="card-body">
-            <select id="demo2" class="form-control">
+            <select id="list2" class="form-control" >
               <script>
                 let text2 = "";
-                text2 += "<option> กรุณาเลือกเล้าไก่ </option>";
-                for (let i = 1; i < 13; i++) {
+                text2 += "<option select > กรุณาเลือกเล้าไก่ </option>";
+                for (let l = 1; l < 13; l++) {
                  
-                  text2 += "<option > เล้าไก่ที่ " + i + "</option>";
+                  text2 += "<option value="+l+"> เล้าไก่ที่ " + l + "</option>";
                 }
-                document.getElementById("demo2").innerHTML = text2;
-                </script>
+                
+                document.getElementById("list2").innerHTML = text2;
+                for (let l = 1; l < 13; l++) {
+                $("#list2").change(function(){
+                var viewID = $("#list2 option:value="+ l +"").val();
+                $("#list2 option").each(function(){
+                var hideID = $(this).val();
+                  $("#"+hideID).hide();
+                    });
+                $("#"+viewID).show();
+                  
+              });
+            }
+              </script>
             </select>
+            <hr>
+<div id="1" style="display: none;">
+hellwo world
+</div>
+<div id="2" style="display: none;">
+  hellwo world
+  </div>
+          </div>
+            <span class="border border-success" id="border2">
+              <figure class="highcharts-figure">
+                  <div id="containerr"></div>
+                  <p class="highcharts-description">
+                    A basic column chart compares rainfall values between four cities.
+                    Tokyo has the overall highest amount of rainfall, followed by New York.
+                    The chart is making use of the axis crosshair feature, to highlight
+                    months as they are hovered over.
+                  </p>
+          </span>
           </div>
         </div>
       </div>
@@ -134,24 +261,7 @@
   </div>
  
 
- 
-
-    <span class="border border-success" id="border2">
-        <figure class="highcharts-figure">
-            <div id="container"></div>
-            <p class="highcharts-description">
-              A basic column chart compares rainfall values between four cities.
-              Tokyo has the overall highest amount of rainfall, followed by New York.
-              The chart is making use of the axis crosshair feature, to highlight
-              months as they are hovered over.
-            </p>
-          </figure>
-     
-          
-    </span>
 </div>
-
-
         </div>
     </div>
 </body>
@@ -173,13 +283,7 @@ Highcharts.chart('container', {
       'เล้าที่ 3',
       'เล้าที่ 4',
       'เล้าที่ 5',
-      'เล้าที่ 6',
-      'เล้าที่ 7',
-      'เล้าที่ 8',
-      'เล้าที่ 9',
-      'เล้าที่ 10',
-      'เล้าที่ 11',
-      'เล้าที่ 12'
+      'เล้าที่ 6'
     ],
     crosshair: true
   },
@@ -192,7 +296,7 @@ Highcharts.chart('container', {
   tooltip: {
     headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
     pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-      '<td style="padding:0"><b>{point.y:.1f} ตัว</b></td></tr>',
+      '<td style="padding:0"><b>{point.y:.1f} กก.</b></td></tr>',
     footerFormat: '</table>',
     shared: true,
     useHTML: true
@@ -205,16 +309,78 @@ Highcharts.chart('container', {
   },
   series: [{
     name: '203T',
-    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0]
 
   }, {
     name: '204T',
-    data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+    data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5]
   }, {
     name: '205T',
-    data: [23.6, 48.8, 68.5, 53.4, 156.0, 34.5, 155.0, 114.3, 11.2, 33.5, 146.6, 72.3]
+    data: [23.6, 48.8, 68.5, 53.4, 156.0, 34.5]
   }
 ]
 });
 </script>
+<script>
+  Highcharts.chart('containerr', {
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'แสดงจำนวนอาหาร'
+    },
+    subtitle: {
+      text: 'แสดงจำนวนอาหารทั้งหมด'
+    },
+    xAxis: {
+      categories: [
+        'เล้าที่ 1 ',
+        'เล้าที่ 2',
+        'เล้าที่ 3',
+        'เล้าที่ 4',
+        'เล้าที่ 5',
+        'เล้าที่ 6',
+        'เล้าที่ 7',
+        'เล้าที่ 8',
+        'เล้าที่ 9',
+        'เล้าที่ 10',
+        'เล้าที่ 11',
+        'เล้าที่ 12'
+      ],
+      crosshair: true
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: 'Rainfall (mm)'
+      }
+    },
+    tooltip: {
+      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        '<td style="padding:0"><b>{point.y:.1f} กก.</b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+    },
+    plotOptions: {
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0
+      }
+    },
+    series: [{
+      name: '203T',
+      data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+  
+    }, {
+      name: '204T',
+      data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+    }, {
+      name: '205T',
+      data: [23.6, 48.8, 68.5, 53.4, 156.0, 34.5, 155.0, 114.3, 11.2, 33.5, 146.6, 72.3]
+    }
+  ]
+  });
+  </script>
 </html>
