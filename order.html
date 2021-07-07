@@ -83,94 +83,582 @@
 <div class="col-md-9 col-xs-12">
     <span class="border border-success" id="border2">
         &nbsp;
-        <h3>เลือการรายการสั่งซื้อ</h3>
+        <h3 id="order">เลือการรายการสั่งซื้อ</h3>
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
         <div class="form-group">
-            <select class="form-control" id="sel1">
-              <option> พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM) นครสวรรค์</option>
-              <option> พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM) ลพบุรี</option>
-            </select>
+            <div id="accordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                      พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM) นครสวรรค์
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      <select id="pagelist" class="form-control">
+                          <script>
+                            let text = "";
+                            text += "<option selected> กรุณาเลือกเล้าไก่ </option>";
+                            for (let i = 1; i < 7; i++) {
+                             
+                              text += "<option value="+i+"> เล้าไก่ที่ " + i + "</option>";
+                            }
+                            document.getElementById("pagelist").innerHTML = text;
+                        $("#pagelist").change(function(){
+                          var viewID = $("#pagelist option:selected").val();
+                          $("#pagelist option").each(function(){
+                          var hideID = $(this).val();
+                            $("#"+hideID).hide();
+                              });
+                          $("#"+viewID).show();
+                        });
+                        </script>
+                    </select>
+                    <hr>
+                    <div id="1" style="display: none;">
+                      <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 1</h3>
+                      <div class="row text-center">
+                        <div class="col-2">
+                            <p class="text-right">จำนวนไก่</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-right">เพศผู้ :</p>
+                    </div>
+                    <div class="col-5">    
+                        <input type="text" class="form-control" placeholder="10">
+                    </div>
+                    <div class="col-1">
+                        <p>ตัว</p>
+                    </div>
+                    <div class="col-2"> 
+                      <button type="submit" class="btn btn-primary">OK</button>
+                    </div>
+                <div class="col-2">    
+                </div>
+                <div class="col-2">
+                    <p class="text-right">เพศเมีย :</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="20">
+                </div>
+                <div class="col-3"> 
+                    <p>ตัว</p>
+                   </div>
+                <div class="col-2">
+                    <p class="text-right">อาหารชนิด</p>
+                </div>
+                <div class="col-2">
+                <p class="text-right">203T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="50">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">204T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="40">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">205T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="30">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                <button type="submit" class="btn btn-primary">สั่งซื้อ</button>
+                <button type="reset" class="btn btn-warning">แก้ไข</button>
+                </div>
+                      </div>
+                    </div>
+                    <div id="2" style="display: none;">
+                      <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 2</h3>
+                      <div class="row text-center">
+                        <div class="col-2">
+                            <p class="text-right">จำนวนไก่</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-right">เพศผู้ :</p>
+                    </div>
+                    <div class="col-5">    
+                        <input type="text" class="form-control" placeholder="10">
+                    </div>
+                    <div class="col-1">
+                        <p>ตัว</p>
+                    </div>
+                    <div class="col-2"> 
+                      <button type="submit" class="btn btn-primary">OK</button>
+                    </div>
+                <div class="col-2">    
+                </div>
+                <div class="col-2">
+                    <p class="text-right">เพศเมีย :</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="20">
+                </div>
+                <div class="col-3"> 
+                    <p>ตัว</p>
+                   </div>
+                <div class="col-2">
+                    <p class="text-right">อาหารชนิด</p>
+                </div>
+                <div class="col-2">
+                <p class="text-right">203T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="50">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">204T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="40">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">205T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="30">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                <button type="submit" class="btn btn-primary">สั่งซื้อ</button>
+                <button type="reset" class="btn btn-warning">แก้ไข</button>
+                </div>
+                      </div>
+                    </div>
+                    <div id="3" style="display: none;">
+                      <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 3</h3>
+                      <div class="row text-center">
+                        <div class="col-2">
+                            <p class="text-right">จำนวนไก่</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-right">เพศผู้ :</p>
+                    </div>
+                    <div class="col-5">    
+                        <input type="text" class="form-control" placeholder="10">
+                    </div>
+                    <div class="col-1">
+                        <p>ตัว</p>
+                    </div>
+                    <div class="col-2"> 
+                      <button type="submit" class="btn btn-primary">OK</button>
+                    </div>
+                <div class="col-2">    
+                </div>
+                <div class="col-2">
+                    <p class="text-right">เพศเมีย :</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="20">
+                </div>
+                <div class="col-3"> 
+                    <p>ตัว</p>
+                   </div>
+                <div class="col-2">
+                    <p class="text-right">อาหารชนิด</p>
+                </div>
+                <div class="col-2">
+                <p class="text-right">203T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="50">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">204T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="40">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">205T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="30">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                <button type="submit" class="btn btn-primary">สั่งซื้อ</button>
+                <button type="reset" class="btn btn-warning">แก้ไข</button>
+                </div>
+                      </div>
+                    </div>
+                    <div id="4" style="display: none;">
+                      <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 4</h3>
+                      <div class="row text-center">
+                        <div class="col-2">
+                            <p class="text-right">จำนวนไก่</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-right">เพศผู้ :</p>
+                    </div>
+                    <div class="col-5">    
+                        <input type="text" class="form-control" placeholder="10">
+                    </div>
+                    <div class="col-1">
+                        <p>ตัว</p>
+                    </div>
+                    <div class="col-2"> 
+                      <button type="submit" class="btn btn-primary">OK</button>
+                    </div>
+                <div class="col-2">    
+                </div>
+                <div class="col-2">
+                    <p class="text-right">เพศเมีย :</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="20">
+                </div>
+                <div class="col-3"> 
+                    <p>ตัว</p>
+                   </div>
+                <div class="col-2">
+                    <p class="text-right">อาหารชนิด</p>
+                </div>
+                <div class="col-2">
+                <p class="text-right">203T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="50">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">204T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="40">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">205T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="30">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                <button type="submit" class="btn btn-primary">สั่งซื้อ</button>
+                <button type="reset" class="btn btn-warning">แก้ไข</button>
+                </div>
+                      </div>
+                    </div>
+                    <div id="5" style="display: none;">
+                      <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 5</h3>
+                      <div class="row text-center">
+                        <div class="col-2">
+                            <p class="text-right">จำนวนไก่</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-right">เพศผู้ :</p>
+                    </div>
+                    <div class="col-5">    
+                        <input type="text" class="form-control" placeholder="10">
+                    </div>
+                    <div class="col-1">
+                        <p>ตัว</p>
+                    </div>
+                    <div class="col-2"> 
+                      <button type="submit" class="btn btn-primary">OK</button>
+                    </div>
+                <div class="col-2">    
+                </div>
+                <div class="col-2">
+                    <p class="text-right">เพศเมีย :</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="20">
+                </div>
+                <div class="col-3"> 
+                    <p>ตัว</p>
+                   </div>
+                <div class="col-2">
+                    <p class="text-right">อาหารชนิด</p>
+                </div>
+                <div class="col-2">
+                <p class="text-right">203T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="50">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">204T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="40">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">205T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="30">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                <button type="submit" class="btn btn-primary">สั่งซื้อ</button>
+                <button type="reset" class="btn btn-warning">แก้ไข</button>
+                </div>
+                      </div>
+                    </div>
+                    <div id="6" style="display: none;">
+                      <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 6</h3>
+                      <div class="row text-center">
+                        <div class="col-2">
+                            <p class="text-right">จำนวนไก่</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="text-right">เพศผู้ :</p>
+                    </div>
+                    <div class="col-5">    
+                        <input type="text" class="form-control" placeholder="10">
+                    </div>
+                    <div class="col-1">
+                        <p>ตัว</p>
+                    </div>
+                    <div class="col-2"> 
+                      <button type="submit" class="btn btn-primary">OK</button>
+                    </div>
+                <div class="col-2">    
+                </div>
+                <div class="col-2">
+                    <p class="text-right">เพศเมีย :</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="20">
+                </div>
+                <div class="col-3"> 
+                    <p>ตัว</p>
+                   </div>
+                <div class="col-2">
+                    <p class="text-right">อาหารชนิด</p>
+                </div>
+                <div class="col-2">
+                <p class="text-right">203T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="50">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">204T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="40">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                <p class="text-right">205T:</p>
+                </div>
+                <div class="col-5">    
+                    <input type="text" class="form-control" placeholder="30">
+                </div>
+                <div class="col-3"> 
+                <p>กก.</p>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                <button type="submit" class="btn btn-primary">สั่งซื้อ</button>
+                <button type="reset" class="btn btn-warning">แก้ไข</button>
+                </div>
+                      </div>
+                    </div>
+                  
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                      พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM) ลพบุรี
+                  </a>
+                  </div>
+                  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      <select id="list2" class="form-control" >
+                        <script>
+                          let text2 = "";
+                          text2 += "<option select > กรุณาเลือกเล้าไก่ </option>";
+                          for (let l = 1; l < 13; l++) {
+                           
+                            text2 += "<option value="+l+"> เล้าไก่ที่ " + l + "</option>";
+                          }
+                          
+                          document.getElementById("list2").innerHTML = text2;
+                          for (let l = 1; l < 13; l++) {
+                          $("#list2").change(function(){
+                          var viewID = $("#list2 option:value="+ l +"").val();
+                          $("#list2 option").each(function(){
+                          var hideID = $(this).val();
+                            $("#"+hideID).hide();
+                              });
+                          $("#"+viewID).show();
+                            
+                        });
+                      }
+                        </script>
+                      </select>
+                      <hr>
+                      <div id="1" >
+                        <h3 class="text-center">แสดงจำนวนไก่เล้าที่ 1</h3>
+                        <div class="row text-center">
+                          <div class="col-2">
+                              <p class="text-right">จำนวนไก่</p>
+                      </div>
+                      <div class="col-2">
+                          <p class="text-right">เพศผู้ :</p>
+                      </div>
+                      <div class="col-5">    
+                          <input type="text" class="form-control" placeholder="10">
+                      </div>
+                      <div class="col-1">
+                          <p>ตัว</p>
+                      </div>
+                      <div class="col-2"> 
+                        <button type="submit" class="btn btn-primary">OK</button>
+                      </div>
+                  <div class="col-2">    
+                  </div>
+                  <div class="col-2">
+                      <p class="text-right">เพศเมีย :</p>
+                  </div>
+                  <div class="col-5">    
+                      <input type="text" class="form-control" placeholder="20">
+                  </div>
+                  <div class="col-3"> 
+                      <p>ตัว</p>
+                     </div>
+                  <div class="col-2">
+                      <p class="text-right">อาหารชนิด</p>
+                  </div>
+                  <div class="col-2">
+                  <p class="text-right">203T:</p>
+                  </div>
+                  <div class="col-5">    
+                      <input type="text" class="form-control" placeholder="50">
+                  </div>
+                  <div class="col-3"> 
+                  <p>กก.</p>
+                  </div>
+                  <div class="col-2">
+                  </div>
+                  <div class="col-2">
+                  <p class="text-right">204T:</p>
+                  </div>
+                  <div class="col-5">    
+                      <input type="text" class="form-control" placeholder="40">
+                  </div>
+                  <div class="col-3"> 
+                  <p>กก.</p>
+                  </div>
+                  <div class="col-2">
+                  </div>
+                  <div class="col-2">
+                  <p class="text-right">205T:</p>
+                  </div>
+                  <div class="col-5">    
+                      <input type="text" class="form-control" placeholder="30">
+                  </div>
+                  <div class="col-3"> 
+                  <p>กก.</p>
+                  </div>
+                  <div class="col-6">
+                  </div>
+                  <div class="col-6">
+                  <button type="submit" class="btn btn-primary">สั่งซื้อ</button>
+                  <button type="reset" class="btn btn-warning">แก้ไข</button>
+                  </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    </div>
+                  </div>
+                </div>
+             
+              </div>
           </div>
         </div>
-        <div class="col-6">
-            <select class="form-control" id="sel1">
-                <option> เล้าที่ 1 </option>
-                <option> เล้าที่ 2 </option>
-                <option> เล้าที่ 3 </option>
-                <option> เล้าที่ 4 </option>
-                <option> เล้าที่ 5 </option>
-                <option> เล้าที่ 6 </option>
-              </select>
-        </div>
-        <div class="col-2">
-            <p class="text-right">จำนวนไก่</p>
-    </div>
-    <div class="col-2">
-        <p class="text-right">เพศผู้ :</p>
-    </div>
-    <div class="col-5">    
-        <input type="text" class="form-control" placeholder="10">
-    </div>
-    <div class="col-1">
-        <p>ตัว</p>
-    </div>
-    <div class="col-2"> 
-      <button type="submit" class="btn btn-primary">OK</button>
-    </div>
-<div class="col-2">    
-</div>
-<div class="col-2">
-    <p class="text-right">เพศเมีย :</p>
-</div>
-<div class="col-5">    
-    <input type="text" class="form-control" placeholder="20">
-</div>
-<div class="col-3"> 
-    <p>ตัว</p>
-   </div>
-<div class="col-2">
-    <p class="text-right">อาหารชนิด</p>
-</div>
-<div class="col-2">
-<p class="text-right">203T:</p>
-</div>
-<div class="col-5">    
-    <input type="text" class="form-control" placeholder="50">
-</div>
-<div class="col-3"> 
-<p>กก.</p>
-</div>
-<div class="col-2">
-</div>
-<div class="col-2">
-<p class="text-right">204T:</p>
-</div>
-<div class="col-5">    
-    <input type="text" class="form-control" placeholder="40">
-</div>
-<div class="col-3"> 
-<p>กก.</p>
-</div>
-<div class="col-2">
-</div>
-<div class="col-2">
-<p class="text-right">205T:</p>
-</div>
-<div class="col-5">    
-    <input type="text" class="form-control" placeholder="30">
-</div>
-<div class="col-3"> 
-<p>กก.</p>
-</div>
-<div class="col-6">
-</div>
-<div class="col-6">
-<button type="submit" class="btn btn-primary">สั่งซื้อ</button>
-<button type="reset" class="btn btn-warning">แก้ไข</button>
-</div>
-        
-    </span>
+    
 </div>
         </div>
     </div>
