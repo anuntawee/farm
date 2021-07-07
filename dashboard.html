@@ -82,78 +82,1952 @@
 </div>
 <div class="col-md-9 col-xs-12">
     <span class="border border-success" id="border2">
-        <table id="example" class="display" style="width:100%">
+        <div id="order" class="text-center">
+            &nbsp; &nbsp; &nbsp;
+        <h3>บันทึกการเลี้ยงไก่เนื้อ (Brolier Dailt Record)</h3>
+        <h4> พงษ์ไพบูลย์ ฟาร์ม  (Company BFI) </h4>
+    </div>
+<div class="container text-right">
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    เพิ่มข้อมูล
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body text-left">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<select id="pagelist" class="form-control">
+    <script>
+      let text = "";
+      text += "<option selected> กรุณาเลือกสัปดาห์</option>";
+      for (let i = 1; i < 8; i++) {
+       
+        text += "<option value="+i+"> สัปดาห์ที่" + i + "</option>";
+      }
+      document.getElementById("pagelist").innerHTML = text;
+  $("#pagelist").change(function(){
+    var viewID = $("#pagelist option:selected").val();
+    $("#pagelist option").each(function(){
+    var hideID = $(this).val();
+      $("#"+hideID).hide();
+        });
+    $("#"+viewID).show();
+  });
+  </script>
+</select>
+<div id="1" style="display: none;">
+<h3 class="text-center">สัปดาห์ที่ 1</h3>
+        <table id="example" class="display table table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>ชื่อฟาร์ม</th>
-                    <th>ที่อยู่</th>
-                    <th>เบอร์โทร</th>
-                    <th>จำนวนไก่เพศผู้</th>
-                    <th>จำนวนไก่เพศเมีย</th>
-                    <th>จำนวนอาหาร</th>
-                  
+                   
+                    <th>อายุ (วัน)</th>
+                    <th>วัน/เดือน/ปี</th>
+                    <th>เบอร์อาหาร</th>
+                    <th>เลขที่ผลิต</th>
+                    <th>อาหารเข้า (กก./ถุง)</th>
+                    <th>อาหารใช้ (กก./ถุง)</th>
+                    <th colspan="2">อุณหภูมิ (C)</th>
+                    <th>%ความชื้นสัมพันธ์</th>
+                    <th>ปริมาณน้ำที่ใช้ (ลิตร)</th>
+                   
+                </tr>
+                <tr class="table table-bordered">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>ต่ำสุด</td>
+                <td>สูงสุด</td>
+                <td></td>
+                <td></td>
+              
                 </tr>
             </thead>
             <tbody>
+             
                 <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-                    <td>61</td>
-                    <td>61</td>
-                    <td>20 กก.</td>
-                   
+                    <td>1</td>
+                   <td>5/7/64</td>
+                   <td>203T</td>
+                   <td>F1002509</td>
+                   <td>1390</td>
+                   <td>300</td>
+                   <td>30</td>
+                   <td>70</td>
+                   <td>77</td>
+                   <td>600</td>
                 </tr>
                 <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>63</td>
-                    <td>63</td>
-                    <td>20 กก.</td>
-                   
+                    <td>2</td>
+                    <td>6/7/64</td>
+                    <td></td>
+                    <td></td>
+                    <td>1390</td>
+                    <td>300</td>
+                    <td>30</td>
+                   <td>70</td>
+                   <td>77</td>
+                   <td>600</td>
                 </tr>
                 <tr>
-                    <td>Ashton Cox</td>
-                    <td>Junior Technical Author</td>
-                    <td>San Francisco</td>
-                    <td>66</td>
-                    <td>66</td>
-                    <td>20 กก.</td>
-                   
+                    <td>3</td>
+                    <td>7/7/64</td>
+                    <td>204T</td>
+                    <td>F1002509</td>
+                    <td>1390</td>
+                    <td>300</td>
+                    <td>30</td>
+                   <td>70</td>
+                   <td>77</td>
+                   <td>600</td>
                 </tr>
                 <tr>
-                    <td>Cedric Kelly</td>
-                    <td>Senior Javascript Developer</td>
-                    <td>Edinburgh</td>
-                    <td>22</td>
-                    <td>22</td>
-                    <td>20 กก.</td>
-                   
+                    <td>4</td>
+                    <td>8/7/64</td>
+                    <td></td>
+                    <td></td>
+                   <td></td>
+                   <td>300</td>
+                   <td>30</td>
+                   <td>70</td>
+                   <td>77</td>
+                   <td>600</td>
                 </tr>
                 <tr>
-                    <td>Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td>33</td>
-                    <td>33</td>
-                    <td>20 กก.</td>
-                 
+                    <td>5</td>
+                    <td>9/7/64</td>
+                    <td></td>
+                    <td>F1002509</td>
+                    <td>1300</td>
+                   <td>500</td>
+                   <td>30</td>
+                   <td>70</td>
+                   <td>77</td>
+                   <td>600</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>10/7/64</td>
+                    <td></td>
+                    <td></td>
+                   <td></td>
+                   <td>300</td>
+                   <td>30</td>
+                   <td>70</td>
+                   <td>77</td>
+                   <td>600</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>11/7/64</td>
+                    <td>205T</td>
+                    <td></td>
+                    <td>1390</td>
+                   <td>300</td>
+                   <td>30</td>
+                   <td>70</td>
+                   <td>77</td>
+                   <td>600</td>
                 </tr>
                
             </tbody>
             <tfoot>
                 <tr>
-                    <th>ชื่อฟาร์ม</th>
-                    <th>ที่อยู่</th>
-                    <th>เบอร์โทร</th>
-                    <th>จำนวนไก่เพศผู้</th>
-                    <th>จำนวนไก่เพศเมีย</th>
-                    <th>จำนวนอาหาร</th>
                    
                 </tr>
             </tfoot>
         </table>
+        <hr>
+        <table id="examplee" class="table table-bordered table-light table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>อายุ (วัน)</th>
+                   <th colspan="2">ไก่ตาย</th>
+                    <th colspan="2">ไก่คัดทิ้ง</th>
+                    <th>ไก่คัดขาเจ็บ</th>
+                    <th>ไก่คัดเล็ก</th>
+                    <th>สูญเสียรวม</th>
+                    <th>น้ำหนัก (กก.)</th>
+                    <th>การให้ยา,สารเสริม & วัคซีน</th>
+                    <th>ปริมาณ</th>
+                    <th>ผู้รับผิดชอบ</th>
+                </tr>
+                <tr class="table table-bordered">
+                    <td></td>
+                    <td>เช้า</td>
+                    <td>เย็น</td>
+                    <td>เช้า</td>
+                    <td>เย็น</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>4</td>
+                    <td>17</td>
+                    <td></td>
+                    <td>Doxcine,BBctosa</td>
+                    <td>60g, 4000</td>
+                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                </tr>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>8</td>
+                <td>3</td>
+                <td>1</td>
+                <td>-</td>
+                <td>4</td>
+                <td>17</td>
+                <td></td>
+                <td>Doxcine,BBctosa</td>
+                <td>60g, 4000</td>
+                <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+            </tr>
+           
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+            <td>3</td>
+            <td>1</td>
+            <td>-</td>
+            <td>4</td>
+            <td>17</td>
+            <td></td>
+            <td>Doxcine,BBctosa</td>
+            <td>60g, 4000</td>
+            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+        </tr>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>8</td>
+        <td>3</td>
+        <td>1</td>
+        <td>-</td>
+        <td>4</td>
+        <td>17</td>
+        <td></td>
+        <td>Doxcine,BBctosa</td>
+        <td>60g, 4000</td>
+        <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+    </tr>
+</tr>
+<tr>
+    <td>5</td>
+    <td>5</td>
+    <td>8</td>
+    <td>3</td>
+    <td>1</td>
+    <td>-</td>
+    <td>4</td>
+    <td>17</td>
+    <td></td>
+    <td>Doxcine,BBctosa</td>
+    <td>60g, 4000</td>
+    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+</tr>
+</tr>
+<tr>
+    <td>6</td>
+    <td>5</td>
+    <td>8</td>
+    <td>3</td>
+    <td>1</td>
+    <td>-</td>
+    <td>4</td>
+    <td>17</td>
+    <td></td>
+    <td>Doxcine,BBctosa</td>
+    <td>60g, 4000</td>
+    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+</tr>
+</tr>
+<tr> 
+    <td>7</td>
+    <td>5</td>
+    <td>8</td>
+    <td>3</td>
+    <td>1</td>
+    <td>-</td>
+    <td>4</td>
+    <td>17</td>
+    <td></td>
+    <td>Doxcine,BBctosa</td>
+    <td>60g, 4000</td>
+    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+</tr>
+
+               
+            </tbody>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div id="2" style="display: none;">
+        <h3 class="text-center">สัปดาห์ที่ 2</h3>
+                <table id="example" class="display table table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                           
+                            <th>อายุ (วัน)</th>
+                            <th>วัน/เดือน/ปี</th>
+                            <th>เบอร์อาหาร</th>
+                            <th>เลขที่ผลิต</th>
+                            <th>อาหารเข้า (กก./ถุง)</th>
+                            <th>อาหารใช้ (กก./ถุง)</th>
+                            <th colspan="2">อุณหภูมิ (C)</th>
+                            <th>%ความชื้นสัมพันธ์</th>
+                            <th>ปริมาณน้ำที่ใช้ (ลิตร)</th>
+                           
+                        </tr>
+                        <tr class="table table-bordered">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>ต่ำสุด</td>
+                        <td>สูงสุด</td>
+                        <td></td>
+                        <td></td>
+                      
+                        </tr>
+                    </thead>
+                    <tbody>
+                     
+                        <tr>
+                            <td>1</td>
+                           <td>5/7/64</td>
+                           <td>203T</td>
+                           <td>F1002509</td>
+                           <td>1390</td>
+                           <td>300</td>
+                           <td>30</td>
+                           <td>70</td>
+                           <td>77</td>
+                           <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>6/7/64</td>
+                            <td></td>
+                            <td></td>
+                            <td>1390</td>
+                            <td>300</td>
+                            <td>30</td>
+                           <td>70</td>
+                           <td>77</td>
+                           <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>7/7/64</td>
+                            <td>204T</td>
+                            <td>F1002509</td>
+                            <td>1390</td>
+                            <td>300</td>
+                            <td>30</td>
+                           <td>70</td>
+                           <td>77</td>
+                           <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>8/7/64</td>
+                            <td></td>
+                            <td></td>
+                           <td></td>
+                           <td>300</td>
+                           <td>30</td>
+                           <td>70</td>
+                           <td>77</td>
+                           <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>9/7/64</td>
+                            <td></td>
+                            <td>F1002509</td>
+                            <td>1300</td>
+                           <td>500</td>
+                           <td>30</td>
+                           <td>70</td>
+                           <td>77</td>
+                           <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>10/7/64</td>
+                            <td></td>
+                            <td></td>
+                           <td></td>
+                           <td>300</td>
+                           <td>30</td>
+                           <td>70</td>
+                           <td>77</td>
+                           <td>600</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>11/7/64</td>
+                            <td>205T</td>
+                            <td></td>
+                            <td>1390</td>
+                           <td>300</td>
+                           <td>30</td>
+                           <td>70</td>
+                           <td>77</td>
+                           <td>600</td>
+                        </tr>
+                       
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                           
+                        </tr>
+                    </tfoot>
+                </table>
+                <hr>
+                <table id="examplee" class="table table-bordered table-light table-striped" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>อายุ (วัน)</th>
+                           <th colspan="2">ไก่ตาย</th>
+                            <th colspan="2">ไก่คัดทิ้ง</th>
+                            <th>ไก่คัดขาเจ็บ</th>
+                            <th>ไก่คัดเล็ก</th>
+                            <th>สูญเสียรวม</th>
+                            <th>น้ำหนัก (กก.)</th>
+                            <th>การให้ยา,สารเสริม & วัคซีน</th>
+                            <th>ปริมาณ</th>
+                            <th>ผู้รับผิดชอบ</th>
+                        </tr>
+                        <tr class="table table-bordered">
+                            <td></td>
+                            <td>เช้า</td>
+                            <td>เย็น</td>
+                            <td>เช้า</td>
+                            <td>เย็น</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>4</td>
+                            <td>17</td>
+                            <td></td>
+                            <td>Doxcine,BBctosa</td>
+                            <td>60g, 4000</td>
+                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                        </tr>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>4</td>
+                        <td>17</td>
+                        <td></td>
+                        <td>Doxcine,BBctosa</td>
+                        <td>60g, 4000</td>
+                        <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                    </tr>
+                   
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>4</td>
+                    <td>17</td>
+                    <td></td>
+                    <td>Doxcine,BBctosa</td>
+                    <td>60g, 4000</td>
+                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                </tr>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>8</td>
+                <td>3</td>
+                <td>1</td>
+                <td>-</td>
+                <td>4</td>
+                <td>17</td>
+                <td></td>
+                <td>Doxcine,BBctosa</td>
+                <td>60g, 4000</td>
+                <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+            </tr>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>8</td>
+            <td>3</td>
+            <td>1</td>
+            <td>-</td>
+            <td>4</td>
+            <td>17</td>
+            <td></td>
+            <td>Doxcine,BBctosa</td>
+            <td>60g, 4000</td>
+            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+        </tr>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>5</td>
+            <td>8</td>
+            <td>3</td>
+            <td>1</td>
+            <td>-</td>
+            <td>4</td>
+            <td>17</td>
+            <td></td>
+            <td>Doxcine,BBctosa</td>
+            <td>60g, 4000</td>
+            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+        </tr>
+        </tr>
+        <tr> 
+            <td>7</td>
+            <td>5</td>
+            <td>8</td>
+            <td>3</td>
+            <td>1</td>
+            <td>-</td>
+            <td>4</td>
+            <td>17</td>
+            <td></td>
+            <td>Doxcine,BBctosa</td>
+            <td>60g, 4000</td>
+            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+        </tr>
+        
+                       
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="3" style="display: none;">
+                <h3 class="text-center">สัปดาห์ที่ 3</h3>
+                        <table id="example" class="display table table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                   
+                                    <th>อายุ (วัน)</th>
+                                    <th>วัน/เดือน/ปี</th>
+                                    <th>เบอร์อาหาร</th>
+                                    <th>เลขที่ผลิต</th>
+                                    <th>อาหารเข้า (กก./ถุง)</th>
+                                    <th>อาหารใช้ (กก./ถุง)</th>
+                                    <th colspan="2">อุณหภูมิ (C)</th>
+                                    <th>%ความชื้นสัมพันธ์</th>
+                                    <th>ปริมาณน้ำที่ใช้ (ลิตร)</th>
+                                   
+                                </tr>
+                                <tr class="table table-bordered">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>ต่ำสุด</td>
+                                <td>สูงสุด</td>
+                                <td></td>
+                                <td></td>
+                              
+                                </tr>
+                            </thead>
+                            <tbody>
+                             
+                                <tr>
+                                    <td>1</td>
+                                   <td>5/7/64</td>
+                                   <td>203T</td>
+                                   <td>F1002509</td>
+                                   <td>1390</td>
+                                   <td>300</td>
+                                   <td>30</td>
+                                   <td>70</td>
+                                   <td>77</td>
+                                   <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>6/7/64</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1390</td>
+                                    <td>300</td>
+                                    <td>30</td>
+                                   <td>70</td>
+                                   <td>77</td>
+                                   <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>7/7/64</td>
+                                    <td>204T</td>
+                                    <td>F1002509</td>
+                                    <td>1390</td>
+                                    <td>300</td>
+                                    <td>30</td>
+                                   <td>70</td>
+                                   <td>77</td>
+                                   <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>8/7/64</td>
+                                    <td></td>
+                                    <td></td>
+                                   <td></td>
+                                   <td>300</td>
+                                   <td>30</td>
+                                   <td>70</td>
+                                   <td>77</td>
+                                   <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>9/7/64</td>
+                                    <td></td>
+                                    <td>F1002509</td>
+                                    <td>1300</td>
+                                   <td>500</td>
+                                   <td>30</td>
+                                   <td>70</td>
+                                   <td>77</td>
+                                   <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>10/7/64</td>
+                                    <td></td>
+                                    <td></td>
+                                   <td></td>
+                                   <td>300</td>
+                                   <td>30</td>
+                                   <td>70</td>
+                                   <td>77</td>
+                                   <td>600</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>11/7/64</td>
+                                    <td>205T</td>
+                                    <td></td>
+                                    <td>1390</td>
+                                   <td>300</td>
+                                   <td>30</td>
+                                   <td>70</td>
+                                   <td>77</td>
+                                   <td>600</td>
+                                </tr>
+                               
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                   
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <hr>
+                        <table id="examplee" class="table table-bordered table-light table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>อายุ (วัน)</th>
+                                   <th colspan="2">ไก่ตาย</th>
+                                    <th colspan="2">ไก่คัดทิ้ง</th>
+                                    <th>ไก่คัดขาเจ็บ</th>
+                                    <th>ไก่คัดเล็ก</th>
+                                    <th>สูญเสียรวม</th>
+                                    <th>น้ำหนัก (กก.)</th>
+                                    <th>การให้ยา,สารเสริม & วัคซีน</th>
+                                    <th>ปริมาณ</th>
+                                    <th>ผู้รับผิดชอบ</th>
+                                </tr>
+                                <tr class="table table-bordered">
+                                    <td></td>
+                                    <td>เช้า</td>
+                                    <td>เย็น</td>
+                                    <td>เช้า</td>
+                                    <td>เย็น</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            
+                                <tr>
+                                    <td>1</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>-</td>
+                                    <td>4</td>
+                                    <td>17</td>
+                                    <td></td>
+                                    <td>Doxcine,BBctosa</td>
+                                    <td>60g, 4000</td>
+                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                </tr>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>8</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>4</td>
+                                <td>17</td>
+                                <td></td>
+                                <td>Doxcine,BBctosa</td>
+                                <td>60g, 4000</td>
+                                <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                            </tr>
+                           
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>4</td>
+                            <td>17</td>
+                            <td></td>
+                            <td>Doxcine,BBctosa</td>
+                            <td>60g, 4000</td>
+                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                        </tr>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <td>4</td>
+                        <td>17</td>
+                        <td></td>
+                        <td>Doxcine,BBctosa</td>
+                        <td>60g, 4000</td>
+                        <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>4</td>
+                    <td>17</td>
+                    <td></td>
+                    <td>Doxcine,BBctosa</td>
+                    <td>60g, 4000</td>
+                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>4</td>
+                    <td>17</td>
+                    <td></td>
+                    <td>Doxcine,BBctosa</td>
+                    <td>60g, 4000</td>
+                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                </tr>
+                </tr>
+                <tr> 
+                    <td>7</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>4</td>
+                    <td>17</td>
+                    <td></td>
+                    <td>Doxcine,BBctosa</td>
+                    <td>60g, 4000</td>
+                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                </tr>
+                
+                               
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div id="4" style="display: none;">
+                        <h3 class="text-center">สัปดาห์ที่ 4</h3>
+                                <table id="example" class="display table table-bordered" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th>อายุ (วัน)</th>
+                                            <th>วัน/เดือน/ปี</th>
+                                            <th>เบอร์อาหาร</th>
+                                            <th>เลขที่ผลิต</th>
+                                            <th>อาหารเข้า (กก./ถุง)</th>
+                                            <th>อาหารใช้ (กก./ถุง)</th>
+                                            <th colspan="2">อุณหภูมิ (C)</th>
+                                            <th>%ความชื้นสัมพันธ์</th>
+                                            <th>ปริมาณน้ำที่ใช้ (ลิตร)</th>
+                                           
+                                        </tr>
+                                        <tr class="table table-bordered">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>ต่ำสุด</td>
+                                        <td>สูงสุด</td>
+                                        <td></td>
+                                        <td></td>
+                                      
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                     
+                                        <tr>
+                                            <td>1</td>
+                                           <td>5/7/64</td>
+                                           <td>203T</td>
+                                           <td>F1002509</td>
+                                           <td>1390</td>
+                                           <td>300</td>
+                                           <td>30</td>
+                                           <td>70</td>
+                                           <td>77</td>
+                                           <td>600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>6/7/64</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1390</td>
+                                            <td>300</td>
+                                            <td>30</td>
+                                           <td>70</td>
+                                           <td>77</td>
+                                           <td>600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>7/7/64</td>
+                                            <td>204T</td>
+                                            <td>F1002509</td>
+                                            <td>1390</td>
+                                            <td>300</td>
+                                            <td>30</td>
+                                           <td>70</td>
+                                           <td>77</td>
+                                           <td>600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>8/7/64</td>
+                                            <td></td>
+                                            <td></td>
+                                           <td></td>
+                                           <td>300</td>
+                                           <td>30</td>
+                                           <td>70</td>
+                                           <td>77</td>
+                                           <td>600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>9/7/64</td>
+                                            <td></td>
+                                            <td>F1002509</td>
+                                            <td>1300</td>
+                                           <td>500</td>
+                                           <td>30</td>
+                                           <td>70</td>
+                                           <td>77</td>
+                                           <td>600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>10/7/64</td>
+                                            <td></td>
+                                            <td></td>
+                                           <td></td>
+                                           <td>300</td>
+                                           <td>30</td>
+                                           <td>70</td>
+                                           <td>77</td>
+                                           <td>600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>11/7/64</td>
+                                            <td>205T</td>
+                                            <td></td>
+                                            <td>1390</td>
+                                           <td>300</td>
+                                           <td>30</td>
+                                           <td>70</td>
+                                           <td>77</td>
+                                           <td>600</td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                           
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <hr>
+                                <table id="examplee" class="table table-bordered table-light table-striped" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>อายุ (วัน)</th>
+                                           <th colspan="2">ไก่ตาย</th>
+                                            <th colspan="2">ไก่คัดทิ้ง</th>
+                                            <th>ไก่คัดขาเจ็บ</th>
+                                            <th>ไก่คัดเล็ก</th>
+                                            <th>สูญเสียรวม</th>
+                                            <th>น้ำหนัก (กก.)</th>
+                                            <th>การให้ยา,สารเสริม & วัคซีน</th>
+                                            <th>ปริมาณ</th>
+                                            <th>ผู้รับผิดชอบ</th>
+                                        </tr>
+                                        <tr class="table table-bordered">
+                                            <td></td>
+                                            <td>เช้า</td>
+                                            <td>เย็น</td>
+                                            <td>เช้า</td>
+                                            <td>เย็น</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                        <tr>
+                                            <td>1</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td>4</td>
+                                            <td>17</td>
+                                            <td></td>
+                                            <td>Doxcine,BBctosa</td>
+                                            <td>60g, 4000</td>
+                                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                        </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>5</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>-</td>
+                                        <td>4</td>
+                                        <td>17</td>
+                                        <td></td>
+                                        <td>Doxcine,BBctosa</td>
+                                        <td>60g, 4000</td>
+                                        <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                    </tr>
+                                   
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>-</td>
+                                    <td>4</td>
+                                    <td>17</td>
+                                    <td></td>
+                                    <td>Doxcine,BBctosa</td>
+                                    <td>60g, 4000</td>
+                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                </tr>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>8</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>4</td>
+                                <td>17</td>
+                                <td></td>
+                                <td>Doxcine,BBctosa</td>
+                                <td>60g, 4000</td>
+                                <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>4</td>
+                            <td>17</td>
+                            <td></td>
+                            <td>Doxcine,BBctosa</td>
+                            <td>60g, 4000</td>
+                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>4</td>
+                            <td>17</td>
+                            <td></td>
+                            <td>Doxcine,BBctosa</td>
+                            <td>60g, 4000</td>
+                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                        </tr>
+                        </tr>
+                        <tr> 
+                            <td>7</td>
+                            <td>5</td>
+                            <td>8</td>
+                            <td>3</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>4</td>
+                            <td>17</td>
+                            <td></td>
+                            <td>Doxcine,BBctosa</td>
+                            <td>60g, 4000</td>
+                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                        </tr>
+                        
+                                       
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div id="5" style="display: none;">
+                                <h3 class="text-center">สัปดาห์ที่ 5</h3>
+                                        <table id="example" class="display table table-bordered" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                   
+                                                    <th>อายุ (วัน)</th>
+                                                    <th>วัน/เดือน/ปี</th>
+                                                    <th>เบอร์อาหาร</th>
+                                                    <th>เลขที่ผลิต</th>
+                                                    <th>อาหารเข้า (กก./ถุง)</th>
+                                                    <th>อาหารใช้ (กก./ถุง)</th>
+                                                    <th colspan="2">อุณหภูมิ (C)</th>
+                                                    <th>%ความชื้นสัมพันธ์</th>
+                                                    <th>ปริมาณน้ำที่ใช้ (ลิตร)</th>
+                                                   
+                                                </tr>
+                                                <tr class="table table-bordered">
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>ต่ำสุด</td>
+                                                <td>สูงสุด</td>
+                                                <td></td>
+                                                <td></td>
+                                              
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                             
+                                                <tr>
+                                                    <td>1</td>
+                                                   <td>5/7/64</td>
+                                                   <td>203T</td>
+                                                   <td>F1002509</td>
+                                                   <td>1390</td>
+                                                   <td>300</td>
+                                                   <td>30</td>
+                                                   <td>70</td>
+                                                   <td>77</td>
+                                                   <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>6/7/64</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>1390</td>
+                                                    <td>300</td>
+                                                    <td>30</td>
+                                                   <td>70</td>
+                                                   <td>77</td>
+                                                   <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>7/7/64</td>
+                                                    <td>204T</td>
+                                                    <td>F1002509</td>
+                                                    <td>1390</td>
+                                                    <td>300</td>
+                                                    <td>30</td>
+                                                   <td>70</td>
+                                                   <td>77</td>
+                                                   <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>8/7/64</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                   <td></td>
+                                                   <td>300</td>
+                                                   <td>30</td>
+                                                   <td>70</td>
+                                                   <td>77</td>
+                                                   <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>9/7/64</td>
+                                                    <td></td>
+                                                    <td>F1002509</td>
+                                                    <td>1300</td>
+                                                   <td>500</td>
+                                                   <td>30</td>
+                                                   <td>70</td>
+                                                   <td>77</td>
+                                                   <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>10/7/64</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                   <td></td>
+                                                   <td>300</td>
+                                                   <td>30</td>
+                                                   <td>70</td>
+                                                   <td>77</td>
+                                                   <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>11/7/64</td>
+                                                    <td>205T</td>
+                                                    <td></td>
+                                                    <td>1390</td>
+                                                   <td>300</td>
+                                                   <td>30</td>
+                                                   <td>70</td>
+                                                   <td>77</td>
+                                                   <td>600</td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                   
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                        <hr>
+                                        <table id="examplee" class="table table-bordered table-light table-striped" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>อายุ (วัน)</th>
+                                                   <th colspan="2">ไก่ตาย</th>
+                                                    <th colspan="2">ไก่คัดทิ้ง</th>
+                                                    <th>ไก่คัดขาเจ็บ</th>
+                                                    <th>ไก่คัดเล็ก</th>
+                                                    <th>สูญเสียรวม</th>
+                                                    <th>น้ำหนัก (กก.)</th>
+                                                    <th>การให้ยา,สารเสริม & วัคซีน</th>
+                                                    <th>ปริมาณ</th>
+                                                    <th>ผู้รับผิดชอบ</th>
+                                                </tr>
+                                                <tr class="table table-bordered">
+                                                    <td></td>
+                                                    <td>เช้า</td>
+                                                    <td>เย็น</td>
+                                                    <td>เช้า</td>
+                                                    <td>เย็น</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>5</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>-</td>
+                                                    <td>4</td>
+                                                    <td>17</td>
+                                                    <td></td>
+                                                    <td>Doxcine,BBctosa</td>
+                                                    <td>60g, 4000</td>
+                                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                </tr>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>5</td>
+                                                <td>8</td>
+                                                <td>3</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>4</td>
+                                                <td>17</td>
+                                                <td></td>
+                                                <td>Doxcine,BBctosa</td>
+                                                <td>60g, 4000</td>
+                                                <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                            </tr>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td>4</td>
+                                            <td>17</td>
+                                            <td></td>
+                                            <td>Doxcine,BBctosa</td>
+                                            <td>60g, 4000</td>
+                                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                        </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>8</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>-</td>
+                                        <td>4</td>
+                                        <td>17</td>
+                                        <td></td>
+                                        <td>Doxcine,BBctosa</td>
+                                        <td>60g, 4000</td>
+                                        <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                    </tr>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>-</td>
+                                    <td>4</td>
+                                    <td>17</td>
+                                    <td></td>
+                                    <td>Doxcine,BBctosa</td>
+                                    <td>60g, 4000</td>
+                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                </tr>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>-</td>
+                                    <td>4</td>
+                                    <td>17</td>
+                                    <td></td>
+                                    <td>Doxcine,BBctosa</td>
+                                    <td>60g, 4000</td>
+                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                </tr>
+                                </tr>
+                                <tr> 
+                                    <td>7</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>-</td>
+                                    <td>4</td>
+                                    <td>17</td>
+                                    <td></td>
+                                    <td>Doxcine,BBctosa</td>
+                                    <td>60g, 4000</td>
+                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                </tr>
+                                
+                                               
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div id="6" style="display: none;">
+                                        <h3 class="text-center">สัปดาห์ที่ 6</h3>
+                                                <table id="example" class="display table table-bordered" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                           
+                                                            <th>อายุ (วัน)</th>
+                                                            <th>วัน/เดือน/ปี</th>
+                                                            <th>เบอร์อาหาร</th>
+                                                            <th>เลขที่ผลิต</th>
+                                                            <th>อาหารเข้า (กก./ถุง)</th>
+                                                            <th>อาหารใช้ (กก./ถุง)</th>
+                                                            <th colspan="2">อุณหภูมิ (C)</th>
+                                                            <th>%ความชื้นสัมพันธ์</th>
+                                                            <th>ปริมาณน้ำที่ใช้ (ลิตร)</th>
+                                                           
+                                                        </tr>
+                                                        <tr class="table table-bordered">
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>ต่ำสุด</td>
+                                                        <td>สูงสุด</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                      
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                     
+                                                        <tr>
+                                                            <td>1</td>
+                                                           <td>5/7/64</td>
+                                                           <td>203T</td>
+                                                           <td>F1002509</td>
+                                                           <td>1390</td>
+                                                           <td>300</td>
+                                                           <td>30</td>
+                                                           <td>70</td>
+                                                           <td>77</td>
+                                                           <td>600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>6/7/64</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>1390</td>
+                                                            <td>300</td>
+                                                            <td>30</td>
+                                                           <td>70</td>
+                                                           <td>77</td>
+                                                           <td>600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>7/7/64</td>
+                                                            <td>204T</td>
+                                                            <td>F1002509</td>
+                                                            <td>1390</td>
+                                                            <td>300</td>
+                                                            <td>30</td>
+                                                           <td>70</td>
+                                                           <td>77</td>
+                                                           <td>600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>8/7/64</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                           <td></td>
+                                                           <td>300</td>
+                                                           <td>30</td>
+                                                           <td>70</td>
+                                                           <td>77</td>
+                                                           <td>600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>9/7/64</td>
+                                                            <td></td>
+                                                            <td>F1002509</td>
+                                                            <td>1300</td>
+                                                           <td>500</td>
+                                                           <td>30</td>
+                                                           <td>70</td>
+                                                           <td>77</td>
+                                                           <td>600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>10/7/64</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                           <td></td>
+                                                           <td>300</td>
+                                                           <td>30</td>
+                                                           <td>70</td>
+                                                           <td>77</td>
+                                                           <td>600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>11/7/64</td>
+                                                            <td>205T</td>
+                                                            <td></td>
+                                                            <td>1390</td>
+                                                           <td>300</td>
+                                                           <td>30</td>
+                                                           <td>70</td>
+                                                           <td>77</td>
+                                                           <td>600</td>
+                                                        </tr>
+                                                       
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                           
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                                <hr>
+                                                <table id="examplee" class="table table-bordered table-light table-striped" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>อายุ (วัน)</th>
+                                                           <th colspan="2">ไก่ตาย</th>
+                                                            <th colspan="2">ไก่คัดทิ้ง</th>
+                                                            <th>ไก่คัดขาเจ็บ</th>
+                                                            <th>ไก่คัดเล็ก</th>
+                                                            <th>สูญเสียรวม</th>
+                                                            <th>น้ำหนัก (กก.)</th>
+                                                            <th>การให้ยา,สารเสริม & วัคซีน</th>
+                                                            <th>ปริมาณ</th>
+                                                            <th>ผู้รับผิดชอบ</th>
+                                                        </tr>
+                                                        <tr class="table table-bordered">
+                                                            <td></td>
+                                                            <td>เช้า</td>
+                                                            <td>เย็น</td>
+                                                            <td>เช้า</td>
+                                                            <td>เย็น</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>5</td>
+                                                            <td>8</td>
+                                                            <td>3</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>4</td>
+                                                            <td>17</td>
+                                                            <td></td>
+                                                            <td>Doxcine,BBctosa</td>
+                                                            <td>60g, 4000</td>
+                                                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                        </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>5</td>
+                                                        <td>8</td>
+                                                        <td>3</td>
+                                                        <td>1</td>
+                                                        <td>-</td>
+                                                        <td>4</td>
+                                                        <td>17</td>
+                                                        <td></td>
+                                                        <td>Doxcine,BBctosa</td>
+                                                        <td>60g, 4000</td>
+                                                        <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                    </tr>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>5</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>-</td>
+                                                    <td>4</td>
+                                                    <td>17</td>
+                                                    <td></td>
+                                                    <td>Doxcine,BBctosa</td>
+                                                    <td>60g, 4000</td>
+                                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                </tr>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>8</td>
+                                                <td>3</td>
+                                                <td>1</td>
+                                                <td>-</td>
+                                                <td>4</td>
+                                                <td>17</td>
+                                                <td></td>
+                                                <td>Doxcine,BBctosa</td>
+                                                <td>60g, 4000</td>
+                                                <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                            </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td>4</td>
+                                            <td>17</td>
+                                            <td></td>
+                                            <td>Doxcine,BBctosa</td>
+                                            <td>60g, 4000</td>
+                                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                        </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td>4</td>
+                                            <td>17</td>
+                                            <td></td>
+                                            <td>Doxcine,BBctosa</td>
+                                            <td>60g, 4000</td>
+                                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                        </tr>
+                                        </tr>
+                                        <tr> 
+                                            <td>7</td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td>4</td>
+                                            <td>17</td>
+                                            <td></td>
+                                            <td>Doxcine,BBctosa</td>
+                                            <td>60g, 4000</td>
+                                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                        </tr>
+                                        
+                                                       
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                            <div id="7" style="display: none;">
+                                                <h3 class="text-center">สัปดาห์ที่ 7</h3>
+                                                        <table id="example" class="display table table-bordered" style="width:100%">
+                                                            <thead>
+                                                                <tr>
+                                                                   
+                                                                    <th>อายุ (วัน)</th>
+                                                                    <th>วัน/เดือน/ปี</th>
+                                                                    <th>เบอร์อาหาร</th>
+                                                                    <th>เลขที่ผลิต</th>
+                                                                    <th>อาหารเข้า (กก./ถุง)</th>
+                                                                    <th>อาหารใช้ (กก./ถุง)</th>
+                                                                    <th colspan="2">อุณหภูมิ (C)</th>
+                                                                    <th>%ความชื้นสัมพันธ์</th>
+                                                                    <th>ปริมาณน้ำที่ใช้ (ลิตร)</th>
+                                                                   
+                                                                </tr>
+                                                                <tr class="table table-bordered">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>ต่ำสุด</td>
+                                                                <td>สูงสุด</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                              
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                             
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                   <td>5/7/64</td>
+                                                                   <td>203T</td>
+                                                                   <td>F1002509</td>
+                                                                   <td>1390</td>
+                                                                   <td>300</td>
+                                                                   <td>30</td>
+                                                                   <td>70</td>
+                                                                   <td>77</td>
+                                                                   <td>600</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2</td>
+                                                                    <td>6/7/64</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td>1390</td>
+                                                                    <td>300</td>
+                                                                    <td>30</td>
+                                                                   <td>70</td>
+                                                                   <td>77</td>
+                                                                   <td>600</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3</td>
+                                                                    <td>7/7/64</td>
+                                                                    <td>204T</td>
+                                                                    <td>F1002509</td>
+                                                                    <td>1390</td>
+                                                                    <td>300</td>
+                                                                    <td>30</td>
+                                                                   <td>70</td>
+                                                                   <td>77</td>
+                                                                   <td>600</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>4</td>
+                                                                    <td>8/7/64</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                   <td></td>
+                                                                   <td>300</td>
+                                                                   <td>30</td>
+                                                                   <td>70</td>
+                                                                   <td>77</td>
+                                                                   <td>600</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>5</td>
+                                                                    <td>9/7/64</td>
+                                                                    <td></td>
+                                                                    <td>F1002509</td>
+                                                                    <td>1300</td>
+                                                                   <td>500</td>
+                                                                   <td>30</td>
+                                                                   <td>70</td>
+                                                                   <td>77</td>
+                                                                   <td>600</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>6</td>
+                                                                    <td>10/7/64</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                   <td></td>
+                                                                   <td>300</td>
+                                                                   <td>30</td>
+                                                                   <td>70</td>
+                                                                   <td>77</td>
+                                                                   <td>600</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>7</td>
+                                                                    <td>11/7/64</td>
+                                                                    <td>205T</td>
+                                                                    <td></td>
+                                                                    <td>1390</td>
+                                                                   <td>300</td>
+                                                                   <td>30</td>
+                                                                   <td>70</td>
+                                                                   <td>77</td>
+                                                                   <td>600</td>
+                                                                </tr>
+                                                               
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                   
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                        <hr>
+                                                        <table id="examplee" class="table table-bordered table-light table-striped" style="width:100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>อายุ (วัน)</th>
+                                                                   <th colspan="2">ไก่ตาย</th>
+                                                                    <th colspan="2">ไก่คัดทิ้ง</th>
+                                                                    <th>ไก่คัดขาเจ็บ</th>
+                                                                    <th>ไก่คัดเล็ก</th>
+                                                                    <th>สูญเสียรวม</th>
+                                                                    <th>น้ำหนัก (กก.)</th>
+                                                                    <th>การให้ยา,สารเสริม & วัคซีน</th>
+                                                                    <th>ปริมาณ</th>
+                                                                    <th>ผู้รับผิดชอบ</th>
+                                                                </tr>
+                                                                <tr class="table table-bordered">
+                                                                    <td></td>
+                                                                    <td>เช้า</td>
+                                                                    <td>เย็น</td>
+                                                                    <td>เช้า</td>
+                                                                    <td>เย็น</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            
+                                                                <tr>
+                                                                    <td>1</td>
+                                                                    <td>5</td>
+                                                                    <td>8</td>
+                                                                    <td>3</td>
+                                                                    <td>1</td>
+                                                                    <td>-</td>
+                                                                    <td>4</td>
+                                                                    <td>17</td>
+                                                                    <td></td>
+                                                                    <td>Doxcine,BBctosa</td>
+                                                                    <td>60g, 4000</td>
+                                                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                                </tr>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>5</td>
+                                                                <td>8</td>
+                                                                <td>3</td>
+                                                                <td>1</td>
+                                                                <td>-</td>
+                                                                <td>4</td>
+                                                                <td>17</td>
+                                                                <td></td>
+                                                                <td>Doxcine,BBctosa</td>
+                                                                <td>60g, 4000</td>
+                                                                <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                            </tr>
+                                                           
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>5</td>
+                                                            <td>8</td>
+                                                            <td>3</td>
+                                                            <td>1</td>
+                                                            <td>-</td>
+                                                            <td>4</td>
+                                                            <td>17</td>
+                                                            <td></td>
+                                                            <td>Doxcine,BBctosa</td>
+                                                            <td>60g, 4000</td>
+                                                            <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                        </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>5</td>
+                                                        <td>8</td>
+                                                        <td>3</td>
+                                                        <td>1</td>
+                                                        <td>-</td>
+                                                        <td>4</td>
+                                                        <td>17</td>
+                                                        <td></td>
+                                                        <td>Doxcine,BBctosa</td>
+                                                        <td>60g, 4000</td>
+                                                        <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                    </tr>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>5</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>-</td>
+                                                    <td>4</td>
+                                                    <td>17</td>
+                                                    <td></td>
+                                                    <td>Doxcine,BBctosa</td>
+                                                    <td>60g, 4000</td>
+                                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                </tr>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>5</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>-</td>
+                                                    <td>4</td>
+                                                    <td>17</td>
+                                                    <td></td>
+                                                    <td>Doxcine,BBctosa</td>
+                                                    <td>60g, 4000</td>
+                                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                </tr>
+                                                </tr>
+                                                <tr> 
+                                                    <td>7</td>
+                                                    <td>5</td>
+                                                    <td>8</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>-</td>
+                                                    <td>4</td>
+                                                    <td>17</td>
+                                                    <td></td>
+                                                    <td>Doxcine,BBctosa</td>
+                                                    <td>60g, 4000</td>
+                                                    <td>นางสาว ทิตฐิตา โตบึงกอก </td>
+                                                </tr>
+                                                
+                                                               
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
     </span>
 </div>
         </div>
@@ -164,4 +2038,5 @@
     $('#example').DataTable();
 } );
 </script>
+
 </html>
