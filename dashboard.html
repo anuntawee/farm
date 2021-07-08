@@ -111,24 +111,18 @@
          <p> อายุ (วัน) 
         </div>
         <div class="col-6">
-            <select name="" id="test" class="form-control">
-            <script>
-                let text = "";
-                text += "<option selected> กรุณาเลือกวัน</option>";
-                for (let i = 1; i < 31; i++) {
-                 
-                  text += "<option value="+i+"> วันที่" + i + "</option>";
-                }
-                document.getElementById("test").innerHTML = text;
-            $("#test").change(function(){
-              var viewID = $("#test option:selected").val();
-              $("#test option").each(function(){
-              var hideID = $(this).val();
-                $("#"+hideID).hide();
-                  });
-              $("#"+viewID).show();
-            });
-            </script>
+            <select class="form-control" id="test" > 
+        
+<script>
+                let txttext = "";
+                      txttext += "<option selected> กรุณาเลือกวัน </option>";
+                      for (let t = 1; t < 32; t++) {
+                        txttext += "<option value="+t+">  " + t + "</option>";
+                      }
+                      document.getElementById("test").innerHTML = txttext;
+</script>
+
+           
          </select></p>
         </div>
         <div class="col-6 text-center">
