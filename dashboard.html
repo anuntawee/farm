@@ -95,18 +95,167 @@
 
   <!-- The Modal -->
   <div class="modal" id="myModal">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">บันทึกการเลี้ยงไก่เนื้อ (Brolier Dailt Record)</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body text-left">
-          Modal body..
+            <div class="row">
+                <div class="col-6 text-center">
+         <p> อายุ (วัน) 
+        </div>
+        <div class="col-6">
+            <select name="" id="test" class="form-control">
+            <script>
+                let text = "";
+                text += "<option selected> กรุณาเลือกวัน</option>";
+                for (let i = 1; i < 31; i++) {
+                 
+                  text += "<option value="+i+"> วันที่" + i + "</option>";
+                }
+                document.getElementById("test").innerHTML = text;
+            $("#test").change(function(){
+              var viewID = $("#test option:selected").val();
+              $("#test option").each(function(){
+              var hideID = $(this).val();
+                $("#"+hideID).hide();
+                  });
+              $("#"+viewID).show();
+            });
+            </script>
+         </select></p>
+        </div>
+        <div class="col-6 text-center">
+         <p>วัน/เดือน/ปี 
+            </div>
+            <div class="col-6">
+                <input type="date" name="" id="" class="form-control">
+         </p>
+        </div>
+        <div class="col-6 text-center">
+            <p>เบอร์อาหาร
+               </div>
+               <div class="col-6">
+                  <select name="" id="" class="form-control">
+                      <option selected>กรุณาเลือกเบอร์อาหาร</option>
+                      <option value="">203T</option>
+                      <option value="">204T</option>
+                      <option value="">205T</option>
+                  </select>
+            </p>
+           </div>
+           <div class="col-6 text-center">
+            <p>เลขที่ผลิต 
+               </div>
+               <div class="col-6">
+                  <input type="text" class="form-control">
+            </p>
+           </div>
+           <div class="col-6 text-center">
+            <p>อาหารเข้า(กก./ถุง)
+               </div>
+               <div class="col-6">
+                  <input type="text" class="form-control">
+            </p>
+           </div>
+           <div class="col-6 text-center">
+            <p>อาหารใช้ (กก./ถุง)
+               </div>
+               <div class="col-6">
+                  <input type="text" class="form-control">
+            </p>
+           </div>
+    <div class="col-4 text-center">
+<p>อุณหภูมิ
+    </div>
+    <div class="col-4 text-center" >
+        ต่ำสุด <input type="text" name="" id="" class="form-control">
+    </div>
+    <div class="col-4 text-center">
+        สูงสุด <input type="text" name="" id="" class="form-control"> </p>
+    </div>
+    <div class="col-6 text-center">
+        <p>%ความชื้นสัมพันธ์
+           </div>
+           <div class="col-6">
+            <input type="text" name="" id="" class="form-control">
+        </p>
+       </div>
+       <div class="col-6 text-center">
+        <p>ปริมาณน้ำที่ใช้
+           </div>
+           <div class="col-6">
+            <input type="text" name="" id="" class="form-control">
+        </p>
+       </div>
+       <div class="col-4 text-center">
+        <p>ไก่ตาย
+            </div>
+            <div class="col-4 text-center" >
+                เช้า  <input type="text" name="" id="" class="form-control">
+            </div>
+            <div class="col-4 text-center">
+                เย็น <input type="text" name="" id="" class="form-control"> </p>
+            </div>
+            <div class="col-4 text-center">
+                <p>ไก่ตัดทิ้ง
+                    </div>
+                    <div class="col-4 text-center" >
+                        เช้า  <input type="text" name="" id="" class="form-control">
+                    </div>
+                    <div class="col-4 text-center">
+                        เย็น <input type="text" name="" id="" class="form-control"> </p>
+                    </div>
+                    <div class="col-6 text-center">
+                        <p>ไก่ตัดขาเจ็บ
+                           </div>
+                           <div class="col-6">
+                            <input type="text" name="" id="" class="form-control">
+                        </p>
+                       </div>
+                       <div class="col-6 text-center">
+                        <p>ไก่คัดเล็ก
+                           </div>
+                           <div class="col-6">
+                            <input type="text" name="" id="" class="form-control">
+                        </p>
+                       </div>
+                       <div class="col-6 text-center">
+                        <p>สูญเสีญรวม
+                           </div>
+                           <div class="col-6">
+                            <input type="text" name="" id="" class="form-control">
+                        </p>
+                       </div>
+                       <div class="col-6 text-center">
+                        <p>การให้ยา,อาหารเสริม,วัคซีน
+                           </div>
+                           <div class="col-6">
+                            <input type="text" name="" id="" class="form-control">
+                        </p>
+                       </div>
+                       <div class="col-6 text-center">
+                        <p>ปริมาณ
+                           </div>
+                           <div class="col-6">
+                            <input type="text" name="" id="" class="form-control">
+                        </p>
+                       </div>
+                       <div class="col-6 text-center">
+                        <p>ผู้รับผิดชอบ
+                           </div>
+                           <div class="col-6">
+                            <input type="text" name="" id="" class="form-control">
+                        </p>
+                       </div>
+          
+        </div>
         </div>
         
         <!-- Modal footer -->
