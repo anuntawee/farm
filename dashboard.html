@@ -107,6 +107,57 @@
         <!-- Modal body -->
         <div class="modal-body text-left">
             <div class="row">
+                <div class="col-6">
+                    <p>
+                    <select class="form-control" id="sel1" onchange="myFunction2()"> 
+                        <option selected> กรุณาเลือกฟาร์ม</option>
+                        <option  value="A"> พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM) นครสวรรค์</option>
+                        <option  value="B"> พงษ์ไพบูลย์ฟาร์ม (PHONG PHAIBUN FARM) ลพบุรี</option>
+                      </select>
+                </div>
+                <div class="col-6">
+                    <select id="pagelist2" class="form-control">
+                        <script>
+    function myFunction2() {
+        if (document.getElementById("sel1").value == "A"){
+            let text = "";
+                          text += "<option selected> กรุณาเลือกเล้าไก่ </option>";
+                          for (let i = 1; i < 7; i++) {
+                            text += "<option value="+i+"> เล้าไก่ที่ " + i + "</option>";
+                          }
+                          document.getElementById("pagelist2").innerHTML = text;
+                      $("#pagelist2").change(function(){
+                        var viewID = $("#pagelist2 option:selected").val();
+                        $("#pagelist2 option").each(function(){
+                        var hideID = $(this).val();
+                          $("#"+hideID).hide();
+                            });
+                        $("#"+viewID).show();
+                      });
+        }     
+        else if (document.getElementById("sel1").value == "B"){
+            let text = "";
+                          text += "<option selected> กรุณาเลือกเล้าไก่ </option>";
+                          for (let i = 1; i < 13; i++) {
+                           
+                            text += "<option value="+i+"> เล้าไก่ที่ " + i + "</option>";
+                          }
+                          document.getElementById("pagelist2").innerHTML = text;
+                      $("#pagelist2").change(function(){
+                        var viewID = $("#pagelist2 option:selected").val();
+                        $("#pagelist2 option").each(function(){
+                        var hideID = $(this).val();
+                          $("#"+hideID).hide();
+                            });
+                        $("#"+viewID).show();
+                      });
+        }        
+    }
+                      </script>
+                  </select>
+                                </p>
+                </div>
+            
                 <div class="col-6 text-center">
          <p> อายุ (วัน) 
         </div>
@@ -245,7 +296,12 @@
                         <p>ผู้รับผิดชอบ
                            </div>
                            <div class="col-6">
-                            <input type="text" name="" id="" class="form-control">
+                               <select name="" id="" class="form-control">
+                                   <option selected>กรุณาเลือกผู้รับผิดชอบ</option>
+                                   <option value="1">นางสาว ทิตฐิตา โตบึงกอก</option>
+                                   <option value="2">นางสาว ทิตฐิตา โตบึงกอก</option>
+                               </select>
+                           
                         </p>
                        </div>
           
